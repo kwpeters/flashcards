@@ -25,10 +25,12 @@
     "gulp": "^3.9.1",
     "gulp-helpers": "kwpeters/gulp-helpers#2d3712a",
     "gulp-sourcemaps": "^2.6.1",
+    "gulp-tape": "0.0.9",
     "gulp-tslint": "^8.1.2",
     "gulp-typescript": "^3.2.2",
     "gulp-uglify": "^3.0.0",
     "strip-json-comments": "^2.0.1",
+    "tap-min": "^1.2.2",
     "tslint": "^5.7.0",
     "typescript": "^2.5.3"
   },
