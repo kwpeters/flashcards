@@ -167,13 +167,34 @@ gulp.task("ut", function () {
         });
     })
     .then(() => {
-        const tape = require("gulp-tape");
-        const tapMin = require("tap-min");
-
-        const stream = gulp.src(outDir + "/**/*.spec.js")
-        .pipe(tape({reporter: tapMin()}));
-
-        return gh.streamsToPromise(stream);
+        // Run Mocha.
+        return spawn("./node_modules/.bin/mocha", ['./tmp/**/*.spec.js']);
     });
 
 });
+
+
+function spawn(cmd, args) {
+    "use strict";
+
+    return new Promise((resolve, reject) => {
+        const cp = require("child_process");
+
+        // cwd - All commands are executed relative to the root of this project
+        //     (where this file lives)
+        // stdio - I/O streams from the spawned command are piped directly to
+        //     this process's I/O streams.  This allows colors to pass
+        //     through
+        const proc = cp.spawn(cmd, args, {cwd: __dirname, stdio: "inherit"});
+
+        proc.once("exit", (exitCode) => {
+            if (exitCode === 0) {
+                resolve();
+            } else {
+                reject();
+            }
+        });
+
+    });
+
+}
