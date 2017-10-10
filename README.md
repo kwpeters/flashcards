@@ -1,2 +1,2 @@
-# flashcards
-A flashcards app
+# QandA
+A quiz app
