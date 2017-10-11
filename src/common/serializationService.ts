@@ -18,6 +18,12 @@ export class SerializationService
         return true;
     }
 
+    public serialize(instances: Array<ISerializable>): Array<ISerialized> {
+        return _.map(instances, (curInst) => {
+            return curInst.serialize();
+        });
+    }
+
     public deserialize(blobs: Array<ISerialized>): Array<ISerializable> | undefined
     {
         const instances: Array<ISerializable> = [];
