@@ -6,7 +6,7 @@ export class QuestionMultChoiceSerializationAide implements ISerializationAide
     }
 
     public get serializationId(): string {
-        return "QuenstionMultChoice";
+        return "QuestionMultChoice";
     }
 
     public deserialize(serialized: ISerialized): QuestionMultChoice | undefined

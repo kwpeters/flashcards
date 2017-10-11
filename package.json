@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/kwpeters/qanda#readme",
   "devDependencies": {
+    "@types/lodash": "^4.14.77",
     "@types/mocha": "^2.2.43",
     "@types/node": "^8.0.33",
     "del": "^3.0.0",
@@ -37,6 +38,7 @@
     "typescript": "^2.5.3"
   },
   "dependencies": {
-    "bluebird": "^3.5.0"
+    "bluebird": "^3.5.0",
+    "lodash": "^4.17.4"
   }
 }

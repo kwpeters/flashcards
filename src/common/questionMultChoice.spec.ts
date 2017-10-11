@@ -6,7 +6,7 @@ import {QuestionMultChoice} from "./questionMultChoice";
 describe("QuestionMultChoice", () => {
 
     const serialized = {
-        serialization: {id: "QuenstionMultChoice", schema: 1},
+        serialization: {id: "QuestionMultChoice", schema: 1},
         question:      "question text",
         answer:        "answer text",
         wrongAnswers:  ["wrong a", "wrong b", "wrong c"]
